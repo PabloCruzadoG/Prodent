@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🦷 Prodent
 
 ¡Bienvenido a **Prodent**! 🎉  
