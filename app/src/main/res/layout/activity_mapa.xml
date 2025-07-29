@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Encabezado fijo tipo Navbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#D0E0DF"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prodent"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/principal"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dirección"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@android:color/black" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="260sp"
+                android:src="@drawable/mapa"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/direccionLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_rounded"
+                android:backgroundTint="#D6E4F2">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/direccion"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/direccionTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/direccion"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/verhorariosTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ver_h"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toBottomOf="@+id/direccionTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#08A600" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ContactoLayout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_rounded"
+                android:backgroundTint="#D6E4F2">
+
+                <ImageView
+                    android:id="@+id/telefono_IV"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/telefono"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/telefono_IV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:gravity="center"
+                    android:padding="8dp">
+                    <TextView
+                        android:id="@+id/contacto_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¿Tienes alguna consulta?"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/numero_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+51 970 256 291"
+                        android:textSize="15sp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contáctanos"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"
+                android:textColor="@android:color/black" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+                <ImageView
+                    android:id="@+id/whatsIv"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/wts"
+                    android:contentDescription="Whatsapp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+                <ImageView
+                    android:id="@+id/instaIv"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/insta"
+                    android:contentDescription="Instagram"
+                    android:clickable="true"
+                    android:focusable="true"/>
+                <ImageView
+                    android:id="@+id/faceIv"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/face"
+                    android:contentDescription="Facebook"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separador"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/bottomNavigationView"
+        android:background="#DDDDDD"/>
+    <!-- Fin del contenido desplazable -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@menu/nav_item_color"
+        app:itemTextColor="@menu/nav_item_color"
+        app:labelVisibilityMode="labeled"
+        app:itemIconSize="35dp"
+        android:paddingTop="7dp"/>
+</LinearLayout>

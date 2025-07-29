@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bottom_sheet_background_simple">
+
+    <!-- Handle simple -->
+    <View
+        android:layout_width="50dp"
+        android:layout_height="5dp"
+        android:background="@drawable/handle_background_simple"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Header simple -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:backgroundTint="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="24dp">
+
+            <!-- Título simple -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_star_filled"
+                    android:layout_marginEnd="8dp"
+                    app:tint="#2A6863" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reseñas del Doctor"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#2A6863"
+                    android:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+            <!-- Contenedor de estadísticas simple -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/stats_container_background_simple"
+                android:padding="16dp">
+
+                <!-- Calificación promedio -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvPromedioCalificacion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="--"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:textColor="#2A6863"
+                        android:fontFamily="sans-serif-light" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Promedio"
+                        android:textSize="12sp"
+                        android:textColor="#666666"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <!-- Separador vertical -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginHorizontal="16dp" />
+
+                <!-- Total de reseñas -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvTotalResenas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="--"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#2A6863"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        android:textSize="12sp"
+                        android:textColor="#666666"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Título de reseñas simple -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comentarios de pacientes"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#2A6863"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Contenedor principal con altura máxima -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="420dp">
+
+        <!-- ScrollView para las reseñas -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollViewResenas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+                <!-- Contenedor para las reseñas -->
+                <LinearLayout
+                    android:id="@+id/containerResenas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- Estado vacío simple -->
+        <LinearLayout
+            android:id="@+id/layoutSinResenas"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:padding="32dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_star_empty"
+                android:alpha="0.3"
+                android:layout_marginBottom="20dp"
+                app:tint="#CCCCCC" />
+
+            <TextView
+                android:id="@+id/tvSinResenas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sin reseñas aún"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#999999"
+                android:gravity="center"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sé el primero en compartir tu experiencia"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="2dp" />
+
+        </LinearLayout>
+
+        <!-- ProgressBar simple -->
+        <LinearLayout
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="100dp"
+            android:padding="32dp">
+
+            <ProgressBar
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:indeterminateTint="#2A6863" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cargando reseñas..."
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

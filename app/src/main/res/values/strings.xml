@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ProDent</string>
+    <string name="mensaje_bienbenida">¡Bienvenido!</string>
+    <string name="correo">Correo Electrónico</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="btn_ingresar">Ingresar</string>
+    <string name="texto_registro"><u>Regístrate aquí</u></string>
+    <string name="registrarme">Registrarme</string>
+    <string name="no_tienes_una_cuenta">¿No tienes una cuenta?</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="correo_electr_nico">Correo Electrónico</string>
+    <string name="bienvenido">¡Bienvenido!</string>
+    <string name="prodent">PRODENT</string>
+    <string name="inicia_sesion_ahora"><u>Inicia sesion ahora</u></string>
+    <string name="repetir_contrase_a">Repetir contraseña</string>
+    <string name="telefono">Telefono</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="nombres">Nombres</string>
+    <string name="registrate">Registrate</string>
+    <string name="cono_reloj">Ícono reloj</string>
+    <string name="bienvenido_pac">Bienvenido👋</string>
+    <string name="bienvenido_doc">Bienvenido Doctor👋</string>
+    <string name="qu_deseas_hacer_hoy">¿Que deseas hacer hoy?</string>
+    <string name="configuraci_n">Configuración</string>
+    <string name="direccion">Av. Mansiche 840, Trujillo 130011</string>
+    <string name="ver_h">Ver horarios</string>
+</resources>

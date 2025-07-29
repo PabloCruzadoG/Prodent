@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="#D0E0DF"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRODENT"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPaciente"
+                android:layout_marginLeft="10dp"
+                android:text="Paciente:"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Medicamentos"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/etMedicamentos"
+                android:hint="Escribe aquí"
+                android:layout_marginLeft="10dp"
+                android:minHeight="80dp"
+                android:gravity="top|start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Cuidados"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/etCuidados"
+                android:hint="Escribe aquí"
+                android:minHeight="80dp"
+                android:gravity="top|start"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:text="Guardar"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="55dp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Separador opcional encima de la barra -->
+    <View
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD" />
+
+    <!-- BottomNavigationView fijo abajo -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@menu/nav_item_color"
+        app:itemTextColor="@menu/nav_item_color"
+        android:background="?android:attr/windowBackground"
+        android:paddingTop="7dp"
+        app:labelVisibilityMode="labeled"
+        app:itemIconSize="35dp" />
+
+</RelativeLayout>

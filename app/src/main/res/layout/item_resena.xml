@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    android:backgroundTint="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header con foto, nombre y calificación -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Foto del paciente simple -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="1dp"
+                android:layout_marginEnd="16dp">
+
+                <ImageView
+                    android:id="@+id/imgPaciente"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_default_doctor"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Información del paciente -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNombrePaciente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre Paciente"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#2A6863"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/tvFecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15/06/2024"
+                    android:textSize="13sp"
+                    android:textColor="#666666"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif" />
+
+            </LinearLayout>
+
+            <!-- Badge de calificación simple -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/rating_badge_background_simple"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:id="@+id/tvCalificacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5.0"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_star_filled"
+                    app:tint="@android:color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Estrellas visuales simples -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="64dp">
+
+            <ImageView
+                android:id="@+id/estrella1"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_star_filled"
+                android:layout_marginEnd="3dp"
+                app:tint="#2A6863" />
+
+            <ImageView
+                android:id="@+id/estrella2"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_star_filled"
+                android:layout_marginEnd="3dp"
+                app:tint="#2A6863" />
+
+            <ImageView
+                android:id="@+id/estrella3"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_star_filled"
+                android:layout_marginEnd="3dp"
+                app:tint="#2A6863" />
+
+            <ImageView
+                android:id="@+id/estrella4"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_star_filled"
+                android:layout_marginEnd="3dp"
+                app:tint="#2A6863" />
+
+            <ImageView
+                android:id="@+id/estrella5"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_star_empty"
+                app:tint="#E0E0E0" />
+
+        </LinearLayout>
+
+        <!-- Comentario simple -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F0F0F0"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/tvComentario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Excelente atención, muy profesional y cuidadoso."
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:lineSpacingExtra="2dp"
+            android:fontFamily="sans-serif"
+            android:layout_marginStart="64dp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

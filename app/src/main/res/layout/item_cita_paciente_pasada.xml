@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#D0E8F2"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="4dp"
+        android:elevation="4dp"
+        android:gravity="center_vertical">
+
+        <!-- Columna izquierda con info de la cita -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvFechaCita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tvDoctorCita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/tvHoraCita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_marginTop="2dp" />
+
+            <!-- ✅ CALIFICACIÓN MOSTRADA DEBAJO DE LOS DATOS -->
+            <LinearLayout
+                android:id="@+id/llCalificacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tu calificación: "
+                    android:textSize="12sp"
+                    android:textColor="#666666" />
+
+                <TextView
+                    android:id="@+id/tvCalificacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFD700"
+                    android:layout_marginStart="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ✅ COLUMNA DERECHA: Botones uno encima del otro -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <!-- ✅ BOTÓN CALIFICAR (se oculta después de calificar) -->
+            <Button
+                android:id="@+id/btnCalificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calificar"
+                android:backgroundTint="#2A6863"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:minWidth="80dp"
+                android:minHeight="36dp"
+                android:visibility="gone" />
+
+            <!-- ✅ BOTÓN VER INDICACIONES (siempre visible) -->
+            <Button
+                android:id="@+id/btnVerIndicaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver indicaciones"
+                android:backgroundTint="#2A6863"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:layout_marginEnd="8dp"
+                android:minWidth="120dp"
+                android:minHeight="36dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

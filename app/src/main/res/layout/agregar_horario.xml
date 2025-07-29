@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutAgregar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white"
+    android:minWidth="300dp">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Horario"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Horario de inicio -->
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horario de Inicio" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/etHoraInicio"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:hint="hh"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etMinInicio"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="mm"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etAmPmInicio"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="AM"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <!-- Horario de fin -->
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horario de Fin" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/etHoraFin"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:hint="hh"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etMinFin"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="mm"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etAmPmFin"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="PM"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <!-- Botones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnGuardarHorario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#004D40"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnCancelarDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:backgroundTint="#B71C1C"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</LinearLayout>
