@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🦷 Prodent
 
 ¡Bienvenido a **Prodent**! 🎉  
@@ -85,3 +86,6 @@ Prodent permite a:
 ## ⚖️ Licencia
 
 Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+=======
+# Prodent
+>>>>>>> dfe901fd097dd0c5f4b0642d3b9640ae7d1f0917
